@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goapi
+spec:
+  selector:
+    matchLabels:
+      app: goapi
+  template:
+    metadata:
+      labels:
+        app: goapi
+    spec:
+      containers:
+      - name: goapi
+        image: goapi:v0
+        imagePullPolicy: Never
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+          - name: go-volume
+            mountPath: /app/config
+            readOnly: true
+      volumes:
+        - name: go-volume
+          configMap:
+            name: goapi-config
+

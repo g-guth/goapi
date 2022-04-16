@@ -1,0 +1,7 @@
+apiVersion: v2
+name: goapi-chart
+keywords:
+  - goapi
+type: application
+appVersion: v2
+version: 0.1.0
