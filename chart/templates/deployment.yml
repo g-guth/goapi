@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: goapi
-        image: guilhermeguth/goapi:latest
+        image: guilhermeguth/goapi:master
         imagePullPolicy: Always
         resources:
           limits:
