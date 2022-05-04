@@ -26,10 +26,7 @@ jobs:
         token: ${{ secrets.OKTETO_TOKEN }}
       
     - name: Kubectl Apply
-      # You may pin to the exact commit or the version.
       uses: okteto/apply@v4.2
       with:
-        # Path to the Kubernetes manifest. Can be a file or a directory
         manifest: ../charts/templates/deployment.yml
-        # If present, the namespace scope for this action. If not specified, it will use the current context
         namespace: g-guth
