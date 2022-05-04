@@ -31,12 +31,12 @@ jobs:
         name: g-guth
     
     - name: Open Web Client Directory
-      working-directory: ../
+      working-directory: ./
       run: |
         ls -la
       
     - name: Kubectl Apply
       uses: okteto/apply@v4.2
       with:
-        manifest: ../chart/templates/deployment.yml
+        manifest: ./chart/templates/deployment.yml
         namespace: g-guth
