@@ -16,7 +16,7 @@ func homeLink(w http.ResponseWriter, r *http.Request) {
 	viper.SetConfigName("environment")
 	viper.ReadInConfig()
 
-	fmt.Fprintf(w, "Welcome home! env: %s", viper.Get("env"))
+	fmt.Fprintf(w, "Welcome home! With env: %s", viper.Get("env"))
 }
 
 func request(w http.ResponseWriter, r *http.Request) {
