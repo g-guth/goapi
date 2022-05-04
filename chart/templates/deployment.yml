@@ -13,8 +13,8 @@ spec:
     spec:
       containers:
       - name: goapi
-        image: goapi:v0
-        imagePullPolicy: Never
+        image: guilhermeguth/goapi:latest
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"
