@@ -33,5 +33,5 @@ jobs:
     - name: Kubectl Apply
       uses: okteto/apply@v4.2
       with:
-        manifest: ../charts/templates/deployment.yml
+        manifest: ../chart/templates/deployment.yml
         namespace: g-guth
