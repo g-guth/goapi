@@ -38,8 +38,8 @@ jobs:
       with:
         context: .
         push: true
-        tags: github
-        labels: github
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
       
     - uses: okteto/login@master
       with:
