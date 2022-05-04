@@ -29,6 +29,11 @@ jobs:
       uses: okteto/namespace@master
       with:
         name: g-guth
+    
+    - name: Open Web Client Directory
+      working-directory: ../
+      run: |
+        ls -la
       
     - name: Kubectl Apply
       uses: okteto/apply@v4.2
